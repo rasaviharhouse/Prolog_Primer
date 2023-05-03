@@ -106,12 +106,12 @@ del(_, [], []).
 del(X, [X|T], L) :- del(X,T,L).
 del(X, [H|T1], [H|T2]) :- X \= H, del(X,T1,T2).
 
-# 18) Check if a list if prefix of another list
+# 18) Check if a list is prefix of another list
 
 prefix([ ], _).
 prefix([P|Pt], [P|T]) :- prefix(Pt, T).
 
-# 19) Check if a list if suffix of another list
+# 19) Check if a list is suffix of another list
 
 suffix(S, S).
 suffix(S, [H|T]) :- suffix(S, T).
